@@ -1,23 +1,23 @@
 //Circular subarray
 //ex {10,5,-5}
 //All normal subarrays + {5,-5,10} , {-5,10} ,{-5,10,5}
+import java.util.*;
 class MaxCircSum
 {
   //Naive Solution
-  public static int maxSum(int[] arr)
+  public static int maxSum(int[] arr,int n)
   {
-    int n=arr.length;
     int res=arr[0];
     for (int i=0;i<n;i++) {
-      int c_sum=arr[i];
-      int m_sum=arr[i];
+      int cur_max=arr[i];
+      int cur_sum=arr[i];
       for (int j=1;j<n;j++) {
         int idx=(i+j)%n;
-        c_sum=+arr[j];
-        m_sum=Math.max(m_sum,c_sum);
+        cur_sum+=arr[idx];
+        cur_max=Math.max(cur_max,cur_sum);
 
       }
-      res=Math.max(res,m_sum);
+      res=Math.max(res,cur_max);
 
     }
     return res;
@@ -30,7 +30,8 @@ class MaxCircSum
       arr[i]=sc.nextInt();
 
     }
-    System.out.println(maxSum(arr));
+    System.out.println(maxSum(arr,n));
+
 
 
   }
