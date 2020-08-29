@@ -23,7 +23,7 @@ class MaxSubSumE
     int res=arr[0];
     int maxEnd=arr[0];
     for (int i=1;i<n;i++) {
-      maxEnd=Math.max(maxEnd+arr[i],arr[i]);
+      maxEnd=Math.max(maxEnd+arr[i],arr[i]);//Sum of sub array ending with i
       res=Math.max(res,maxEnd);
 
     }
