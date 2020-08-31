@@ -1,4 +1,5 @@
 // Moore's Voting Algorithm for majority elements
+import java.util.*;
 class MooreVot
 {
   public static int findM(int[] arr,int n)
@@ -26,13 +27,14 @@ class MooreVot
       {
         count++;
       }
-      if(count<=n/2)
-      {
-        return -1;
-      }
 
 
     }
+    if(count<=n/2)
+    {
+      return -1;
+    }
+
     return res;
 
   }
