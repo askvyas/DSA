@@ -37,5 +37,6 @@ class MinFlip
     }
     printFlips(arr,t);
   }
+  //Sol
 
 }
