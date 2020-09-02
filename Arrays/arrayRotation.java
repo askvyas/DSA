@@ -19,8 +19,14 @@ public class ArrayRotation
     static void rightRotate(int arr[], int d, int n)
     {
        reverseArray(arr, 0, n - 1);
+       printArray(arr,n);
+       System.out.println();
        reverseArray(arr, 0, d - 1);
+       printArray(arr,n);
+       System.out.println();
        reverseArray(arr, d, n - 1);
+       printArray(arr,n);
+       System.out.println();
     }
 
     static void printArray(int arr[], int size)
@@ -47,7 +53,8 @@ public class ArrayRotation
       if((k>=0)&&(k<n)){
       rightRotate(arr,k,n);
       printArray(arr, n);
-      System.out.println();}
+      System.out.println();
+    }
       else if(k>=n)
       {
 
