@@ -49,6 +49,7 @@ class FriendsAge
           else
           {
 
+
             res+=(arc[arr[i]-1]*(arc[arr[j]-1]));
 
 
