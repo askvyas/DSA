@@ -1,3 +1,5 @@
+//Solution not Working Check FriendHash\
+
 import java.util.*;
 class FriendsAge
 {
@@ -29,20 +31,25 @@ class FriendsAge
     for (int i=0;i<n;i++) {
       for (int j=0;j<n;j++) {
 
-        if((j!=i)&&(!(satis(arr[i],arr[j]))))
+        if(j!=i)
+        {
+        if(!(satis(arr[i],arr[j])))
+
         {
           if(arr[i]==arr[j])
           {
 
             if(n==arc[arr[i]-1])
             {
-              res=(arc[arr[i]-1]*(arc[arr[j]-1]-1));
+              res=(arc[arr[i]-1]*(arc[arr[i]-1]-1));
 
               break;
 
           }
           else {
             res+=(arc[arr[i]-1]*(arc[arr[j]-1]-1));
+            break;
+
           }
           }
 
@@ -55,15 +62,14 @@ class FriendsAge
 
           }
         }
-        else {
-          continue;
-        }
+}
 
 
 
       }
 
     }
+
     System.out.println(res);
 
   }

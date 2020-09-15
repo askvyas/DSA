@@ -1,4 +1,4 @@
-//Construct a 3d Array of elements and their freequencires
+//Construct a 3d Array of elements and their freequencires u
 import java.util.*;
 class ArrayFreq
 {
