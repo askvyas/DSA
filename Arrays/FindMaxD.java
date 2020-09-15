@@ -10,21 +10,20 @@ class FindMaxD
     }
     int res=0;
     int cn=0;
-    for (int i=0;i<n;i++) {
-      for (int j=i+1;j<n;j++) {
-        if(arr[j]>arr[i])
-        {
-          int tmp=j-i;
-          res=Math.max(res,tmp);
-          cn++;
-        }
-
-      }
-
+    int maxD=1;
+    int minVal=0;
+    for(int j=1;j<n;j++)
+    {
+      if(arr[j]>arr[minVal])
+      {
+      maxD=Math.max(maxD,j-minVal);
+      minVal=Math.min(minVal,j);
+      cn++;
+    }
     }
     if(cn>0)
 
-{    System.out.println(res);
+{    System.out.println(maxD);
   }
   else {
     System.out.println(-1);
