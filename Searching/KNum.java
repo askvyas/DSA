@@ -1,0 +1,11 @@
+/*You are given an array
+a
+ with
+N
+ integers and an integer
+K
+. Output the smallest number in array which occurs exactly
+K
+ times in an array. There will always be a number that is occurring
+K
+ times.*/
