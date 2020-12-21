@@ -11,10 +11,18 @@ class Maxi
 
 
     }
+    int max=0;
+    int c=0;
     for (int i=0;i<n;i++) {
-      
+      max+=(arr[i]*5);
+      if(max<=(240-k))
+      {
+        c++;
+
+      }
 
     }
+    System.out.println(c);
 
   }
 }
