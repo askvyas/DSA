@@ -1,9 +1,11 @@
 import java.util.*;
 class RotS
 {
+  public static void rotateByO(int[] arr,int n)
+  {}
   public static int binS(int[] arr,int l,int r,int x)
   {
-    if(r>=l)
+    if(l<=r)
     {
       int mid=l+ (r-l) / 2;
       if(arr[mid]==x)
@@ -21,6 +23,7 @@ class RotS
     }
     return -1;
   }
+  
   public static void main(String[] args) {
     Scanner sc=new Scanner(System.in);
     int t=sc.nextInt();
