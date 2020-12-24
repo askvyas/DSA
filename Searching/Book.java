@@ -36,7 +36,7 @@ class Book
       }
 
     }
-    System.out.println(arr.length-Math.max(a,b));
+    System.out.println(arr.length-(a+b));
 
   }
 }
