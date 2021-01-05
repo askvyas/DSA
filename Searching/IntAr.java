@@ -39,7 +39,31 @@ class IntAr
     return res;
   }
 
+public static int getI(int[] arr,int n,int k)
+{
+  int res=0;
+  int i=0;
+  int j=1;
+  while (i<j && j<n) {
+    if(arr[j]-arr[i]==k)
+    {
+      res++;
+    }
+    if(arr[j]-arr[i]>k)
+    {
+       i++;
 
+
+    }
+    else {
+      j++;
+
+    }
+
+
+  }
+  return res;
+}
   public static void main(String[] args) {
     Scanner sc=new Scanner(System.in);
     int n=sc.nextInt();
@@ -51,7 +75,7 @@ class IntAr
 
     }
     Arrays.sort(arr);
-    System.out.println(getPair(arr,n,k));
+    System.out.println(getI(arr,n,k));
 
 
   }
